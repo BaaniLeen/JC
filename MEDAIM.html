@@ -1,0 +1,48 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+    /* .navl {
+        color: #54BCEB !important;
+    }
+
+    .navl:hover {
+        background-color: #54BCEB;
+        color: white !important;
+    } */
+</style>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">MEDAIM Lab</a>
+        </div>
+        <ul class="nav navbar-nav justify-content-end">
+            <li class="nav-item active"><a class="navl" href="#">Home</a></li>
+            <li class="nav-item"><a class="navl" class="navl" href="#">Research</a></li>
+            <li class="nav-item"><a class="navl" href="#">Team</a></li>
+            <li class="nav-item"><a class="navl" href="#">Publications</a></li>
+            <li class="nav-item"><a class="navl" href="#">News</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    var nav = document.getElementsByClassName("nav-item");
+    for (var j = 0; j < nav.length; j++) {
+        var btns = nav[j].getElementsByClassName("navl");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", " ");
+                this.className += " active";
+            });
+        }
+    }
+</script>
